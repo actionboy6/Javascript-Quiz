@@ -1,3 +1,4 @@
+var timerEl = document.querySelector('.timer')
 var question = document.querySelector('#question');
 var choices = Array-from(document.querySelectorAll('#choice-text'));
 var progressText = document.querySelector('#progressText');
@@ -9,6 +10,9 @@ var acceptingAnswers = true;
 var score = 0;
 var questionCounter = 0;
 var availableQuestions = [];
+var timeLeft = 20
+
+timerEl.textContent = timeLeft;
 
 var questions = [
     {
@@ -43,6 +47,13 @@ function startQuiz () {
     // if selected option === correct option, progress +1 to score.
     // else no points awareded and 5 seconds are taken away.
 }
+function updateTime() {
+    timerEl.textContent = timeLeft  
+}
 // timer function
 startQuiz ()
 // have some listerner that starts the game.
+var timerId = setInterval(function() {
+    timeLeft = timeLeft - 1
+    updateTime()
+}, 1000)
