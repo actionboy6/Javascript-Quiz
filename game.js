@@ -1,6 +1,6 @@
 var timerEl = document.querySelector('.timer')
 var question = document.querySelector('#question');
-var choices = Array-from(document.querySelectorAll('#choice-text'));
+var choices = Array.from(document.querySelectorAll('#choice-text'));
 var progressText = document.querySelector('#progressText');
 var scoreText = document.querySelector('#score');
 var pregressBarFull = document.querySelector('#progressBarFull');
@@ -12,7 +12,7 @@ var questionCounter = 0;
 var availableQuestions = [];
 var timeLeft = 20
 
-timerEl.textContent = timeLeft;
+
 
 var questions = [
     {
@@ -38,6 +38,12 @@ var questions = [
 ]
 
 function startQuiz () {
+    timerEl.textContent = timeLeft;
+    timerId = setInterval(function() {
+        timeLeft = timeLeft - 1
+        updateTime()
+    }, 1000)
+    console.log("startquiz")
     // container for quiz question
     // use element for quiz questions
     // use listener for correct quiz option.
@@ -53,7 +59,3 @@ function updateTime() {
 // timer function
 startQuiz ()
 // have some listerner that starts the game.
-var timerId = setInterval(function() {
-    timeLeft = timeLeft - 1
-    updateTime()
-}, 1000)
