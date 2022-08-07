@@ -16,24 +16,24 @@ var timeLeft = 20
 
 var questions = [
     {
-        question: "Who played Nyota Uhura in Star Trek(1966)?",
-        options: ["Beyonce","Nichelle Nichols","Oprah","Danai Gurira"],
-        correct: "Nichelle Nichols"
+        question: "",
+        options: ["A","B","C","D"],
+        correct: "B"
     },
     {
-        question: "Which band did a mashup album with Jay-Z back when MTV was still a thing?",
-        options: ["Linkin Park","Limp Bizkit","Rage Against the Machine","Disturbed"],
-        correct: "Linkin Park"
+        question: "",
+        options: ["A","B","C","D"],
+        correct: "A"
     },
     {
-        question: "Who is 'Baba Yaga' in John Wick?",
-        options: ["'The boogey-man?'","The Muffin Man","'The man you sent to kill the f*cking boogey-man'","The mafia's lawyer."],
-        correct: "'The man you sent to kill the f*cking boogey-man'"
+        question: "",
+        options: ["A","B","C","D"],
+        correct: "C"
     },
     {
-        question: "Robert Downey Jr was made world famous when he was starred as Tony Stark, a billionaire who created Iron Man. However, that wasn't his only starring role. What else did he star in?",
-        options: ["Tropic Thunder","","",""],
-        correct: ""
+        question: "",
+        options: ["A","B","C","D"],
+        correct: "D"
     }
 ]
 
@@ -55,6 +55,9 @@ function startQuiz () {
 }
 function updateTime() {
     timerEl.textContent = timeLeft  
+    if (timeLeft === 0) {
+        stop.timerEl
+    }
 }
 // timer function
 startQuiz ()

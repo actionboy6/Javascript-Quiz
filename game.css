@@ -3,9 +3,6 @@
     border: 2px solid black;
 }
 
-body {
-    color:#fff
-}
 
 .choice-container {
     display: flex;
@@ -58,8 +55,8 @@ body {
 }
 
 #progressBar {
-    width: 20rem;
-    height: 4rem;
+    width: 2rem;
+    height: 3rem;
     border: 0.2rem solid rgb(Yellow);
     margin-top: 2rem;
     border-radius: 50px;
